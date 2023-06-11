@@ -35,7 +35,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
 
-        mRoomList.add(Room(7500,"서울시 동대문구", 8, "서울시 동대문구의 8층 7500만원 방입니다."))
+        mRoomList.add(Room(10500,"서울시 동대문구", 8, "서울시 동대문구의 8층 7500만원 방입니다."))
         mRoomList.add(Room(6500,"서울시 서대문구", -2, "서울시 서대문구의 8층 7500만원 방입니다."))
 
         mRoomAdapter = RoomAdapter(this, R.layout.room_list_item, mRoomList)
