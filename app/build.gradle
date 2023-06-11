@@ -7,6 +7,11 @@ android {
     namespace 'com.cnc.landapp_kh'
     compileSdk 33
 
+    buildFeatures {
+        // 뷰 바인딩 활성화
+        viewBinding true
+    }
+
     defaultConfig {
         applicationId "com.cnc.landapp_kh"
         minSdk 24
