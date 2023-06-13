@@ -1,5 +1,6 @@
 package com.cnc.landapp_kh
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ArrayAdapter
@@ -41,7 +42,12 @@ class MainActivity : AppCompatActivity() {
         mRoomAdapter = RoomAdapter(this, R.layout.room_list_item, mRoomList)
         binding.roomListView.adapter = mRoomAdapter
 
-
+        binding.roomListView.setOnItemClickListener { parent, view, position, id ->
+            val clickedRoom = mRoomList[position]
+            val myIntent = Intent(this, ViewRoomDetailActivity::class.java)
+            myIntent.putExtra("room", clickedRoom)  //Serializable추가해야함
+            startActivity(myIntent)
+        }
     }
 
 
